@@ -37,9 +37,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
     public void enable(View view){
-    	sudo("echo 1 > /sys/devices/platform/tran_battery/OTG_CTL");
+    	sudo("echo 1 > /sys/class/oplus_chg/usb/otg_switch");
     }
     public void disable(View view){
-    	sudo("echo 0 > /sys/devices/platform/tran_battery/OTG_CTL");
+    	sudo("echo 0 > /sys/class/oplus_chg/usb/otg_switch");
     }
 }
